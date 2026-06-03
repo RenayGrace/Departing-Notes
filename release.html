@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Release Portal — DepartingNotes</title>
+<meta name="description" content="The DepartingNotes Release Portal for executors. Submit a death certificate to release a member's final messages to their loved ones.">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="DepartingNotes home"><svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="3" y="14" width="34" height="22" rx="6" fill="#1F3D34"/><path d="M6 17.5 20 27l14-9.5" stroke="#FBF8F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 14c0-4 2.4-6.8 0-11-2.4 4.2 0 7 0 11Z" fill="#8BA888"/><path d="M20 14c.2-3 2.6-4.6 5-5.2-1 2.8-2.6 4.4-5 5.2Z" fill="#B9802F"/><circle cx="20" cy="5" r="1.8" fill="#EAD9BC"/></svg> DepartingNotes</a>
+    <nav class="nav-links" aria-label="Primary"><a href="how-it-works.html">How It Works</a><a href="plans.html">Plans</a><a href="partners.html">Partners</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <div class="nav-actions"><a href="login.html" class="btn btn-ghost">Log In</a><a href="register.html" class="btn btn-primary">Create Free Account</a><button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="ambient a1"></div><div class="ambient a2"></div>
+  <div class="wrap head-block center reveal">
+    <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.3 8 10 4.6-1.7 8-5 8-10V6l-8-4Z"/></svg> For executors</span>
+    <h1>Release Portal</h1>
+    <p class="lede">If you are here, someone trusted you with their final messages. We are honored to help you honor them — gently, securely, and with care.</p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap" style="max-width:720px">
+    <div class="notice reveal mb-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> <span>Take your time. There is no rush. Our team will personally review your submission within 24–48 hours and guide you through every step.</span></div>
+
+    <form class="form-card reveal" data-validate data-success="Thank you. We've received your submission and will be in touch shortly." data-redirect="release-confirm.html">
+      <h3 class="mb-2">Submit a release request</h3>
+
+      <div class="field"><label for="mname">Member's full legal name <span class="req">*</span></label><input id="mname" name="memberName" type="text" required><span class="error"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter the member's full legal name.</span></div>
+
+      <div class="field"><label for="mid">Member's email or Member ID <span class="req">*</span></label><input id="mid" name="memberId" type="text" required><span class="hint">The Member ID is printed on their wallet card or key‑chain tag.</span><span class="error"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter an email or Member ID.</span></div>
+
+      <div class="field"><label for="dop">Date of passing <span class="req">*</span></label><input id="dop" name="dateOfPassing" type="date" required><span class="error"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter the date of passing.</span></div>
+
+      <div class="divider-leaf"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C7 7 7 13 12 22 17 13 17 7 12 2Z"/></svg></div>
+
+      <div class="field"><label for="ename">Your full name (executor) <span class="req">*</span></label><input id="ename" name="executorName" type="text" autocomplete="name" required><span class="error"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter your name.</span></div>
+
+      <div class="field"><label for="eemail">Your email address <span class="req">*</span></label><input id="eemail" name="executorEmail" type="email" autocomplete="email" required><span class="error"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter a valid email.</span></div>
+
+      <div class="field"><label for="erel">Your relationship to the member <span class="req">*</span></label><input id="erel" name="relationship" type="text" placeholder="e.g. spouse, child, friend, attorney" required><span class="error"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please enter your relationship.</span></div>
+
+      <div class="field"><label>Death certificate <span class="req">*</span></label>
+        <label class="file-drop" for="cert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+          <div><strong style="color:var(--forest)">Click to upload</strong> or drag and drop</div>
+          <div class="small">PDF or JPG · max 10MB · <span class="file-name">no file selected</span></div>
+          <input id="cert" name="certificate" type="file" accept=".pdf,.jpg,.jpeg,.png" hidden required>
+        </label>
+        <span class="error"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Please upload the death certificate.</span>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg">Submit Release Request</button>
+      <p class="small muted center mt-1">Your submission is encrypted and reviewed only by authorized DepartingNotes staff.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><a href="index.html" class="brand"><svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="3" y="14" width="34" height="22" rx="6" fill="#1F3D34"/><path d="M6 17.5 20 27l14-9.5" stroke="#FBF8F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 14c0-4 2.4-6.8 0-11-2.4 4.2 0 7 0 11Z" fill="#8BA888"/><path d="M20 14c.2-3 2.6-4.6 5-5.2-1 2.8-2.6 4.4-5 5.2Z" fill="#B9802F"/><circle cx="20" cy="5" r="1.8" fill="#EAD9BC"/></svg> DepartingNotes</a><p class="footer-tag mt-1">Everyone deserves the right to say goodbye.</p></div>
+      <div class="footer-col"><h4>Explore</h4><a href="how-it-works.html">How It Works</a><a href="plans.html">Membership Plans</a><a href="partners.html">Our Partners</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Account</h4><a href="register.html">Create Account</a><a href="login.html">Member Log In</a><a href="release.html">Release Portal</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="ccpa.html">CCPA Notice</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year>2026</span> DepartingNotes Co. All Rights Reserved.</span><span>A platform by R. Grace Rodriguez, Esq.</span></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span class="msg"></span></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
