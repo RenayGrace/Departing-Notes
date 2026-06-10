@@ -74,8 +74,8 @@
       var action = btn.dataset.verify;
       var name = card.dataset.member || 'the member';
       if (action === 'reject' && !confirm('Reject this submission and flag it for review? This cannot be undone.')) return;
-      if (action === 'approve' && !confirm('Approve release for ' + name + '? This will immediately deliver all designated messages to their recipients.')) return;
-      var msg = { approve: 'Release approved — recipients are being notified.', hold: 'Placed on hold — executor will be asked for more information.', reject: 'Submission rejected and flagged for security review.' }[action];
+      if (action === 'approve' && !confirm('Approve release for ' + name + "? This begins release according to the member's chosen timing rules (immediate, or delayed up to one year).")) return;
+      var msg = { approve: 'Release approved — delivery will follow the member\'s timing rules.', hold: 'Placed on hold — executor will be asked for more information.', reject: 'Submission rejected and flagged for security review.' }[action];
       card.style.transition = 'opacity .4s, transform .4s'; card.style.opacity = '.45';
       var statusEl = card.querySelector('[data-status]');
       if (statusEl) {
