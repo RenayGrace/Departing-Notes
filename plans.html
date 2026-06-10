@@ -4,9 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Membership Plans — DepartingNotes</title>
-<meta name="description" content="Choose your plan. Leave your legacy. Free, Essential, Premium, and Family plans — every plan includes your physical wallet card and key-chain tag.">
+<meta name="description" content="Choose your plan. The Peace Plan, The Whole Picture, The Legacy Plan, and The Family Legacy — plus a free plan. Every paid plan includes your QR emergency keychain.">
 <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  /* Page-local: 5-plan grid + keychain lines + signature features */
+  .plans-grid.five{grid-template-columns:repeat(5,1fr); gap:1rem}
+  .plans-grid.five .plan{padding:1.7rem 1.3rem}
+  .plans-grid.five .plan h3{font-family:var(--font-display); font-size:1.25rem}
+  @media (max-width:1180px){.plans-grid.five{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:760px){.plans-grid.five{grid-template-columns:1fr}}
+  .keychain-line{display:inline-flex; align-items:center; gap:.4rem; font-size:.78rem; font-weight:700; margin-top:.5rem; padding:.25rem .6rem; border-radius:var(--r-pill)}
+  .keychain-line svg{width:14px; height:14px}
+  .keychain-line.inc{background:var(--sage-soft); color:#2F5340}
+  .keychain-line.add{background:var(--gold-soft); color:#6B4A18}
+  .sig-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem}
+  @media (max-width:900px){.sig-grid{grid-template-columns:1fr}}
+  .sig{background:var(--surface); border:1px solid var(--border); border-radius:var(--r-lg); padding:2rem; box-shadow:var(--shadow-sm); position:relative; overflow:hidden}
+  .sig .icon-badge{width:56px; height:56px; border-radius:16px; display:flex; align-items:center; justify-content:center; margin-bottom:1.1rem}
+  .sig .icon-badge svg{width:28px; height:28px}
+  .sig h3{margin-bottom:.5rem}
+  .sig p{font-size:.95rem}
+  .sig .feat-tag{display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); margin-bottom:.4rem}
+  .sig .note{margin-top:1rem; font-size:.85rem; font-weight:600; color:var(--forest); display:flex; gap:.45rem; align-items:flex-start}
+  .sig .note svg{width:16px; height:16px; flex:none; margin-top:2px; color:var(--gold)}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -23,7 +45,7 @@
   <div class="wrap head-block center reveal">
     <span class="eyebrow">Membership plans</span>
     <h1>Choose your plan.<br>Leave your legacy.</h1>
-    <p class="lede">Every plan includes your physical DepartingNotes wallet card and key‑chain tag. A one‑time <strong style="color:var(--forest)">$25 registration fee</strong> applies to all tiers.</p>
+    <p class="lede">Every paid plan includes your <strong style="color:var(--forest)">QR emergency keychain</strong>. On the free plan, you can add it for a one‑time <strong style="color:var(--forest)">$25</strong>.</p>
     <div class="plan-toggle mt-1" role="group" aria-label="Billing period">
       <button data-mode="annual" class="active">Annual <span class="save-pill">Save 17%</span></button>
       <button data-mode="monthly">Monthly</button>
@@ -34,94 +56,145 @@
 <!-- Plan cards -->
 <section class="section-tight">
   <div class="wrap">
-    <div class="plans-grid">
+    <div class="plans-grid five">
       <!-- Free -->
       <div class="plan reveal" data-d="1">
         <h3>Free</h3>
         <div class="price"><span data-annual="$0" data-monthly="$0">$0</span></div>
         <div class="per">Free forever</div>
-        <div class="cardfee">+ $25 one‑time card fee</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 1 heartfelt letter</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Join unlimited Tribes</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Wallet card & key‑chain tag</li>
-          <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg> Photos & document vault</li>
+        <span class="keychain-line add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg> $25 keychain (optional)</span>
+        <ul style="margin-top:1.1rem">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> One letter to many</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Statutory will</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Letter‑writing templates</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> $25 QR keychain available</li>
         </ul>
         <a href="register.html?plan=free" class="btn btn-ghost btn-block">Get Started</a>
       </div>
-      <!-- Essential -->
+      <!-- The Peace Plan -->
       <div class="plan reveal" data-d="2">
-        <h3>Essential</h3>
+        <h3>The Peace Plan</h3>
         <div class="price"><span data-annual="$97" data-monthly="$9.97">$97</span><small data-per>/year · billed annually</small></div>
-        <div class="per">Best for individuals</div>
-        <div class="cardfee">+ $25 one‑time card fee</div>
-        <ul>
+        <div class="per">For individuals</div>
+        <span class="keychain-line inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Keychain included</span>
+        <ul style="margin-top:1.1rem">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Unlimited letters</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Photos & basic document vault</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Create 1 Tribe</li>
-          <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg> Full vault & partner access</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Tribes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Basic estate package</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 10% off Nara‑Story</li>
         </ul>
-        <a href="register.html?plan=essential" class="btn btn-primary btn-block">Choose Essential</a>
+        <a href="register.html?plan=peace" class="btn btn-primary btn-block">Choose Peace Plan</a>
       </div>
-      <!-- Premium -->
-      <div class="plan featured reveal" data-d="3">
-        <span class="tag">Most loved</span>
-        <h3>Premium</h3>
+      <!-- The Whole Picture -->
+      <div class="plan reveal" data-d="3">
+        <h3>The Whole Picture</h3>
         <div class="price"><span data-annual="$197" data-monthly="$19.97">$197</span><small data-per>/year · billed annually</small></div>
-        <div class="per">Complete legacy protection</div>
-        <div class="cardfee">+ $25 one‑time card fee</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Everything in Essential</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Full document vault</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Attorney & financial planner access</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Life Story service · 1.5× points</li>
+        <div class="per">Emotional + legal + financial</div>
+        <span class="keychain-line inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Keychain included</span>
+        <ul style="margin-top:1.1rem">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Everything in The Peace Plan</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Annual budget review</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Upload redacted bank statements</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Financial clarity, no judgment</li>
         </ul>
-        <a href="register.html?plan=premium" class="btn btn-gold btn-block">Choose Premium</a>
+        <a href="register.html?plan=whole-picture" class="btn btn-primary btn-block">Choose Whole Picture</a>
       </div>
-      <!-- Family -->
-      <div class="plan reveal" data-d="4">
-        <h3>Family</h3>
-        <div class="price"><span data-annual="$397" data-monthly="$39.97">$397</span><small data-per>/year · billed annually</small></div>
-        <div class="per">Up to 4 members</div>
-        <div class="cardfee">+ $25 per member card fee</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Everything in Premium</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Up to 4 linked accounts</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Unlimited Tribes</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 2× reward points</li>
+      <!-- The Legacy Plan (featured) -->
+      <div class="plan featured reveal" data-d="4">
+        <span class="tag">Most complete</span>
+        <h3>The Legacy Plan</h3>
+        <div class="price"><span data-annual="$297" data-monthly="$29.97">$297</span><small data-per>/year · billed annually</small></div>
+        <div class="per">The full life plan</div>
+        <span class="keychain-line inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Keychain included</span>
+        <ul style="margin-top:1.1rem">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Everything in The Whole Picture</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> AI estate review</li>
+          <!-- INTERNAL FLAG: Do NOT link integrousfinancial.com here. Its public site is a B2B CFO/accounting firm for cleantech startups and does not describe a consumer wealth/budget module. Use "coming soon" until a dedicated consumer landing page exists. -->
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Integrous wealth module <span class="muted" style="font-size:.78rem">(coming soon)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> GHICA attorneys · free consult</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 20% off trust packages</li>
         </ul>
-        <a href="register.html?plan=family" class="btn btn-primary btn-block">Choose Family</a>
+        <a href="register.html?plan=legacy" class="btn btn-gold btn-block">Choose Legacy Plan</a>
+      </div>
+      <!-- The Family Legacy Plan -->
+      <div class="plan reveal" data-d="4">
+        <h3>The Family Legacy</h3>
+        <div class="price"><span data-annual="$397" data-monthly="$39.97">$397</span><small data-per>/year · billed annually</small></div>
+        <div class="per">For two, together</div>
+        <span class="keychain-line inc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Keychain access included*</span>
+        <ul style="margin-top:1.1rem">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Two full Legacy Plan memberships</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Everything in The Legacy Plan, ×2</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Plan together as a couple</li>
+          <li class="muted" style="font-size:.8rem; align-items:flex-start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Final keychain quantity to be confirmed</li>
+        </ul>
+        <a href="register.html?plan=family-legacy" class="btn btn-primary btn-block">Choose Family Legacy</a>
       </div>
     </div>
     <p class="center muted small mt-2 reveal">Not sure which plan? <a href="register.html?plan=free" class="link-arrow" style="display:inline-flex">Start free — upgrade anytime</a></p>
   </div>
 </section>
 
-<!-- Full comparison -->
+<!-- Signature features -->
 <section class="bg-paper-2">
+  <div class="wrap">
+    <div class="head-block center reveal mb-2"><span class="eyebrow">Signature features</span><h2>Built to protect what matters most</h2><p>Three things at the heart of DepartingNotes — designed to honor your family and handle your most sensitive materials responsibly.</p></div>
+    <div class="sig-grid">
+      <!-- The Keychain -->
+      <div class="sig reveal" data-d="1">
+        <span class="feat-tag">The Keychain · $25</span>
+        <div class="icon-badge gold" style="background:var(--gold-soft); color:var(--gold)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M9 6h6M9 18h6"/></svg></div>
+        <h3>The Keychain</h3>
+        <p>The keychain is a physical QR‑code tag that first responders can scan in an emergency. When scanned, your emergency contacts are notified, your emergency vault opens according to the platform's rules, and your designated letters can be triggered for release. This is a unique signature feature that no competitor currently offers.</p>
+        <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8h.01M11 12h1v4h1"/></svg> $25 — unless included in a paid plan.</div>
+      </div>
+      <!-- Ethical Release Rules -->
+      <div class="sig reveal" data-d="2">
+        <span class="feat-tag">Ethical Release Rules</span>
+        <div class="icon-badge" style="background:var(--sage-soft); color:var(--forest)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.3 8 10 4.6-1.7 8-5 8-10V6l-8-4Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>The vault stays sealed</h3>
+        <p>Your vault stays sealed until death is confirmed by documentation, such as a death certificate. This rule is non‑negotiable and is set by the platform, not by the member. After death is confirmed, the member's chosen timing rules control when materials are released. Release can be immediate or delayed for up to one year.</p>
+        <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Protected by the platform — never opened early.</div>
+      </div>
+      <!-- Milestone Delivery -->
+      <div class="sig reveal" data-d="3">
+        <span class="feat-tag">Milestone Delivery</span>
+        <div class="icon-badge rose" style="background:#F3DED8; color:var(--rose)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3>Milestone Delivery</h3>
+        <p>Members can write letters to be held and delivered at future life moments, such as a child's graduation, wedding, birthday, adoption, major achievement, or other meaningful milestone. These letters are entrusted to a designated distributor, who decides the right moment to deliver them.</p>
+        <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z"/></svg> A presence that lasts across a whole life.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Full comparison -->
+<section>
   <div class="wrap">
     <div class="head-block center reveal mb-2"><span class="eyebrow">Compare every feature</span><h2>The full picture</h2></div>
     <div class="cmp-wrap reveal">
       <table class="cmp-table">
-        <thead><tr><th class="feat" scope="col">Feature</th><th scope="col">Free</th><th scope="col">Essential</th><th scope="col">Premium</th><th scope="col">Family</th></tr></thead>
+        <thead><tr><th class="feat" scope="col">Feature</th><th scope="col">Free</th><th scope="col">Peace</th><th scope="col">Whole Picture</th><th scope="col">Legacy</th><th scope="col">Family Legacy</th></tr></thead>
         <tbody>
-          <tr class="price-row"><th scope="row">Price (annual)</th><td>$0</td><td>$97</td><td>$197</td><td>$397</td></tr>
-          <tr><th scope="row">Card fee</th><td>$25</td><td>$25</td><td>$25</td><td>$25/member</td></tr>
-          <tr><th scope="row">Letters</th><td>1</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr>
-          <tr><th scope="row">Photos</th><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
-          <tr><th scope="row">Basic document vault</th><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
-          <tr><th scope="row">Full document vault</th><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
-          <tr><th scope="row">Attorney directory</th><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
-          <tr><th scope="row">Financial planner directory</th><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
-          <tr><th scope="row">Life Story service</th><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
-          <tr><th scope="row">Annual estate plan review</th><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
-          <tr><th scope="row">Free 30‑min consultation</th><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
-          <tr><th scope="row">Join Tribes</th><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
-          <tr><th scope="row">Create Tribes</th><td class="no">—</td><td>1</td><td>Unlimited</td><td>Unlimited</td></tr>
-          <tr><th scope="row">Members covered</th><td>1</td><td>1</td><td>1</td><td>Up to 4</td></tr>
-          <tr><th scope="row">Points multiplier</th><td>1×</td><td>1×</td><td>1.5×</td><td>2×</td></tr>
+          <tr class="price-row"><th scope="row">Price (annual)</th><td>$0</td><td>$97</td><td>$197</td><td>$297</td><td>$397</td></tr>
+          <tr><th scope="row">QR keychain</th><td>$25 add‑on</td><td>Included</td><td>Included</td><td>Included</td><td>Included*</td></tr>
+          <tr><th scope="row">Letters</th><td>1 (to many)</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr>
+          <tr><th scope="row">Statutory will</th><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">Letter templates</th><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">Tribes</th><td>Join</td><td>Create</td><td>Create</td><td>Create</td><td>Create</td></tr>
+          <tr><th scope="row">Basic estate package</th><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">Milestone Delivery</th><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">10% off Nara‑Story</th><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">Annual budget review</th><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">AI estate plan review</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">Integrous wealth module</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td>Soon</td><td>Soon</td></tr>
+          <tr><th scope="row">GHICA attorney network</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">Free consultation</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">20% off trust packages</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td><td class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></td></tr>
+          <tr><th scope="row">Members covered</th><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td></tr>
         </tbody>
       </table>
+      <p class="muted small mt-1">“Soon” = the Integrous wealth‑planning module is in development; its consumer experience will be announced before launch. *Family Legacy keychain quantity to be confirmed.</p>
     </div>
   </div>
 </section>
@@ -130,13 +203,13 @@
 <section>
   <div class="wrap hero-grid">
     <div class="reveal">
-      <span class="eyebrow">Your card</span>
+      <span class="eyebrow">The keychain</span>
       <h2>Always with you.<br>Always ready.</h2>
-      <p class="lede mt-1">Your DepartingNotes card lives in your wallet; the tag rides on your keys. Your executor finds it, scans the QR code, and your messages begin their journey home.</p>
+      <p class="lede mt-1">The QR‑code keychain rides on your keys. In an emergency, first responders scan it — your emergency contacts are notified, your emergency vault opens by the platform's rules, and your designated letters can be triggered for release.</p>
       <ul class="stack-sm mt-2 small">
-        <li>• $25 one‑time registration fee</li>
-        <li>• Replacement cards $15</li>
-        <li>• Family Plan: $25 per member</li>
+        <li>• $25 — or included with every paid plan</li>
+        <li>• Replacement tag $15</li>
+        <li>• Scannable QR links to DepartingNotes.com/release</li>
       </ul>
     </div>
     <div class="reveal" data-d="2">
