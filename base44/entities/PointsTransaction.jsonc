@@ -1,0 +1,60 @@
+{
+  "name": "PointsTransaction",
+  "type": "object",
+  "properties": {
+    "member_id": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "points": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "transaction_type": {
+      "type": "string",
+      "enum": [
+        "earn",
+        "redeem"
+      ],
+      "default": "earn"
+    }
+  },
+  "required": [
+    "member_id",
+    "action",
+    "points"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "$or": [
+        {
+          "data.member_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

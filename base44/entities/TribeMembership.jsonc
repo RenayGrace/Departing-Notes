@@ -1,0 +1,41 @@
+{
+  "name": "TribeMembership",
+  "type": "object",
+  "properties": {
+    "tribe_id": {
+      "type": "string"
+    },
+    "member_id": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "creator",
+        "member"
+      ],
+      "default": "member"
+    },
+    "invited_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tribe_id",
+    "member_id"
+  ],
+  "rls": {
+    "create": {
+      "data.member_id": "{{user.id}}"
+    },
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}
