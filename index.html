@@ -1,14 +1,317 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://base44.com/logo_v2.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>Base44 APP</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DepartingNotes — Leave a note. Just in case.</title>
+<meta name="description" content="DepartingNotes is a secure digital legacy vault. Write letters, store final wishes, and have your words delivered to the people you love — when it matters most.">
+<meta property="og:title" content="DepartingNotes — Leave a note. Just in case.">
+<meta property="og:description" content="Your words. Your legacy. Delivered to the people you love — when it matters most.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="DepartingNotes home">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="3" y="14" width="34" height="22" rx="6" fill="#1F3D34"/><path d="M6 17.5 20 27l14-9.5" stroke="#FBF8F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 14c0-4 2.4-6.8 0-11-2.4 4.2 0 7 0 11Z" fill="#8BA888"/><path d="M20 14c.2-3 2.6-4.6 5-5.2-1 2.8-2.6 4.4-5 5.2Z" fill="#B9802F"/><circle cx="20" cy="5" r="1.8" fill="#EAD9BC"/></svg>
+      DepartingNotes
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="plans.html">Plans</a>
+      <a href="partners.html">Partners</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost">Log In</a>
+      <a href="register.html" class="btn btn-primary">Create Free Account</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="ambient a1"></div>
+  <div class="ambient a2"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.3 8 10 4.6-1.7 8-5 8-10V6l-8-4Z"/></svg> Trusted, encrypted, attorney-backed</span>
+      <h1>Leave a note.<br><span class="accent">Just in case.</span></h1>
+      <p class="lede">Your words. Your legacy. Delivered to the people you love — exactly when it matters most.</p>
+      <div class="hero-cta">
+        <a href="register.html" class="btn btn-primary btn-lg">Create Your Free Account
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="how-it-works.html" class="btn btn-ghost btn-lg">See How It Works</a>
+      </div>
+      <div class="hero-trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> AES‑256 encrypted</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Private while you're alive</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Free to start</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal" data-d="2">
+      <div class="hero-bloom"></div>
+      <div class="hero-float f1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Vault locked</div>
+      <div class="hero-float f2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg> Delivered with love</div>
+      <article class="letter-card">
+        <div class="to">To my daughter, Maya</div>
+        <p class="body-line">If you're reading this, know that every good thing I ever did, I did thinking of you…</p>
+        <div class="sign">— With all my love, Mom</div>
+        <svg class="wax" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="34" fill="#C97B6B"/><circle cx="40" cy="40" r="34" stroke="#A85C4D" stroke-width="2" stroke-dasharray="3 4"/><path d="M40 26c5 5 5 9 0 14-5-5-5-9 0-14Z" fill="#EAD9BC" opacity=".7"/><text x="40" y="52" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" fill="#FBF8F3">DN</text></svg>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2 — THE PROBLEM ============ -->
+<section class="bg-paper-2">
+  <div class="wrap head-block center reveal">
+    <span class="eyebrow">Why this matters</span>
+    <h2>What happens to your words<br>when you're gone?</h2>
+    <p class="lede">Most people leave behind bills to pay and closets to clean out. Very few leave behind the words that matter — the goodbye, the <span class="serif-italic" style="color:var(--rose)">I love you</span>, the final message to the people who needed to hear it most.</p>
+    <p class="hand" style="font-size:1.6rem; margin-top:.5rem">DepartingNotes changes that.</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 — HOW IT WORKS ============ -->
+<section>
+  <div class="wrap">
+    <div class="head-block center reveal mb-2">
+      <span class="eyebrow">Simple as 1, 2, 3</span>
+      <h2>Three steps to peace of mind</h2>
+    </div>
+    <div class="grid grid-3 steps">
+      <div class="card step reveal" data-d="1">
+        <div class="num">1</div>
+        <h3>Write</h3>
+        <p>Write letters, upload documents, and record your final wishes in a beautiful, private space made just for them.</p>
+      </div>
+      <div class="card step reveal" data-d="2">
+        <div class="num">2</div>
+        <h3>Store</h3>
+        <p>Everything is locked in your encrypted vault. While you're alive, only you can open it — no exceptions, ever.</p>
+      </div>
+      <div class="card step reveal" data-d="3">
+        <div class="num">3</div>
+        <h3>Release</h3>
+        <p>When you pass, your executor submits your death certificate — and your messages are delivered, automatically.</p>
+      </div>
+    </div>
+    <div class="center mt-2 reveal"><a href="register.html" class="btn btn-gold btn-lg">Start for Free</a></div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 — TIERS PREVIEW ============ -->
+<section class="bg-dark">
+  <div class="wrap">
+    <div class="head-block center reveal mb-2">
+      <span class="eyebrow">Choose your plan</span>
+      <h2>Start free. Grow when you're ready.</h2>
+      <p>Begin free, or choose a plan. Every <strong style="color:#fff">paid plan includes your QR emergency keychain</strong> — free members can add it for $25.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card reveal" data-d="1" style="background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.12)">
+        <h3 style="color:#fff; font-family:var(--font-display)">The Peace Plan</h3>
+        <p style="color:#B9B2A4; font-size:.9rem">$97 / year</p>
+        <ul class="stack-sm" style="margin-top:1rem; color:#C9C2B4; font-size:.9rem">
+          <li>Unlimited letters & Tribes</li><li>Basic estate package</li><li>Keychain included</li>
+        </ul>
+      </div>
+      <div class="card reveal" data-d="2" style="background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.12)">
+        <h3 style="color:#fff; font-family:var(--font-display)">The Whole Picture</h3>
+        <p style="color:#B9B2A4; font-size:.9rem">$197 / year</p>
+        <ul class="stack-sm" style="margin-top:1rem; color:#C9C2B4; font-size:.9rem">
+          <li>Everything in Peace Plan</li><li>Annual budget review</li><li>Financial clarity, no judgment</li>
+        </ul>
+      </div>
+      <div class="card reveal" data-d="3" style="background:linear-gradient(160deg,rgba(185,128,47,.22),rgba(255,255,255,.04)); border-color:var(--gold)">
+        <span class="save-pill" style="background:var(--gold); color:#fff">Most complete</span>
+        <h3 style="color:#fff; margin-top:.6rem; font-family:var(--font-display)">The Legacy Plan</h3>
+        <p style="color:#EAD9BC; font-size:.9rem">$297 / year</p>
+        <ul class="stack-sm" style="margin-top:1rem; color:#E6DFD2; font-size:.9rem">
+          <li>AI estate review</li><li>GHICA attorneys · free consult</li><li>20% off trusts</li>
+        </ul>
+      </div>
+      <div class="card reveal" data-d="4" style="background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.12)">
+        <h3 style="color:#fff; font-family:var(--font-display)">The Family Legacy</h3>
+        <p style="color:#B9B2A4; font-size:.9rem">$397 / year</p>
+        <ul class="stack-sm" style="margin-top:1rem; color:#C9C2B4; font-size:.9rem">
+          <li>Two full Legacy memberships</li><li>Everything, for both of you</li><li>Plan together</li>
+        </ul>
+      </div>
+    </div>
+    <div class="center mt-2 reveal"><a href="plans.html" class="btn btn-light btn-lg">See Full Plans</a></div>
+  </div>
+</section>
+
+<!-- ============ SECTION 5 — TRIBES ============ -->
+<section>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Tribes</span>
+      <h2>Stay connected —<br>even after you're gone.</h2>
+      <p class="lede mt-1">Tribes are communities of people who want to be remembered together. Your church family. Your high‑school class. Your book club.</p>
+      <p class="mt-1">Create a Tribe and invite the people who matter to you — so when it's time, no one is left wondering. <strong style="color:var(--forest)">No one is left to find out three months too late.</strong></p>
+      <div class="hero-cta"><a href="register.html" class="btn btn-primary">Create Your Tribe</a></div>
+    </div>
+    <div class="reveal" data-d="2">
+      <div class="card" style="padding:2.4rem">
+        <div class="tribe-visual mb-2">
+          <span class="tribe-avatar">JM</span><span class="tribe-avatar" style="background:var(--gold-soft)">RS</span>
+          <span class="tribe-avatar" style="background:#F3DED8">AL</span><span class="tribe-avatar">KP</span>
+          <span class="tribe-avatar" style="background:var(--gold-soft)">+74</span>
+        </div>
+        <h3>Riverside Book Club</h3>
+        <p class="small">78 members · founded 2019</p>
+        <div class="divider-leaf"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C7 7 7 13 12 22 17 13 17 7 12 2Z"/></svg></div>
+        <p class="small muted">“We read 200 books together. Now we'll remember each other forever.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 6 — PARTNERS ============ -->
+<section class="bg-paper-2">
+  <div class="wrap">
+    <div class="head-block center reveal mb-2">
+      <span class="eyebrow">Trusted partners</span>
+      <h2>Your legacy, fully supported</h2>
+      <p>Premium and Family members get direct access to vetted professionals who help protect what you've built.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal" data-d="1">
+        <div class="icon-badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div>
+        <h3>Richard Squire</h3>
+        <p class="small muted" style="margin-bottom:.6rem">Life Story Narrative Services</p>
+        <p>“We help you write the story of your life — in your words, for the people you love.”</p>
+        <a class="link-arrow mt-1" href="partners.html#richard-squire">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="card reveal" data-d="2">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Joe Wexler</h3>
+        <p class="small muted" style="margin-bottom:.6rem">Financial Planning & Legacy Protection</p>
+        <p>“Your financial legacy is as important as your personal one. Let's protect both.”</p>
+        <a class="link-arrow mt-1" href="partners.html#joe-wexler">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="card reveal" data-d="3">
+        <div class="icon-badge rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+        <h3>R. Grace Rodriguez, Esq.</h3>
+        <p class="small muted" style="margin-bottom:.6rem">Estate Planning & Legal Services</p>
+        <p>“Every vault should be backed by a legally sound estate plan. We make that easy.”</p>
+        <a class="link-arrow mt-1" href="partners.html#grace-rodriguez">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 7 — SOCIAL PROOF ============ -->
+<section>
+  <div class="wrap">
+    <div class="stats reveal mb-2">
+      <div class="stat"><div class="n"><span data-count="12480">0</span>+</div><div class="l">accounts already created</div></div>
+      <div class="stat"><div class="n"><span data-count="38200">0</span></div><div class="l">letters safely stored</div></div>
+      <div class="stat"><div class="n"><span data-count="4">0</span>.9★</div><div class="l">average member rating</div></div>
+    </div>
+    <div class="grid grid-3">
+      <figure class="quote-card reveal" data-d="1">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg>
+        </div>
+        <blockquote>“I wrote letters to each of my grandchildren. Knowing they'll receive them someday gives me a peace I can't describe.”</blockquote>
+        <figcaption class="who"><span class="avatar">EM</span><span><b>Eleanor M.</b><span>Premium member, Ohio</span></span></figcaption>
+      </figure>
+      <figure class="quote-card reveal" data-d="2">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg>
+        </div>
+        <blockquote>“Setting it up took ten minutes. The relief has lasted ever since. This is the kindest thing I've done for my family.”</blockquote>
+        <figcaption class="who"><span class="avatar" style="background:var(--gold-soft)">DR</span><span><b>David R.</b><span>Family plan, Texas</span></span></figcaption>
+      </figure>
+      <figure class="quote-card reveal" data-d="3">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></svg>
+        </div>
+        <blockquote>“When my mother passed, her letter arrived two days later. I'll treasure those words for the rest of my life.”</blockquote>
+        <figcaption class="who"><span class="avatar" style="background:#F3DED8">SP</span><span><b>Sofia P.</b><span>Recipient, California</span></span></figcaption>
+      </figure>
+    </div>
+    <p class="center small muted mt-2 reveal">Member stories shown are illustrative as we welcome our founding community.</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 8 — FINAL CTA ============ -->
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <svg class="candle" style="top:-20px; right:8%; width:120px" viewBox="0 0 24 24" fill="#EAD9BC"><path d="M12 2c3 4 3 7 0 10-3-3-3-6 0-10Z"/></svg>
+      <span class="eyebrow" style="color:var(--gold-soft); justify-content:center">It takes 5 minutes</span>
+      <h2 style="margin:.6rem 0">Don't wait. Start your note today.</h2>
+      <p>It takes less than five minutes to create your free account. Your loved ones will thank you for it — in a moment you'll never see, but they'll never forget.</p>
+      <div class="hero-cta" style="justify-content:center; margin-top:1.8rem">
+        <a href="register.html" class="btn btn-gold btn-lg">Create Your Free Account — It's Free
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" aria-label="DepartingNotes home">
+          <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="3" y="14" width="34" height="22" rx="6" fill="#1F3D34"/><path d="M6 17.5 20 27l14-9.5" stroke="#FBF8F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 14c0-4 2.4-6.8 0-11-2.4 4.2 0 7 0 11Z" fill="#8BA888"/><path d="M20 14c.2-3 2.6-4.6 5-5.2-1 2.8-2.6 4.4-5 5.2Z" fill="#B9802F"/><circle cx="20" cy="5" r="1.8" fill="#EAD9BC"/></svg>
+          DepartingNotes
+        </a>
+        <p class="footer-tag mt-1">Everyone deserves the right to say goodbye.</p>
+        <div class="footer-social mt-2">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 9H3v12h3V9ZM4.5 3a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM21 21h-3v-6c0-1.6-.6-2.5-1.9-2.5-1 0-1.6.7-1.9 1.4-.1.2-.1.6-.1.9v6.2h-3V9h3v1.4c.4-.7 1.2-1.6 2.9-1.6 2.1 0 3.9 1.4 3.9 4.3V21Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="plans.html">Membership Plans</a>
+        <a href="partners.html">Our Partners</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <a href="register.html">Create Account</a>
+        <a href="login.html">Member Log In</a>
+        <a href="release.html">Release Portal</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="ccpa.html">CCPA Notice</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> DepartingNotes Co. All Rights Reserved.</span>
+      <span>A platform by R. Grace Rodriguez, Esq.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span class="msg"></span></div>
+
+<script src="assets/js/main.js"></script>
+</body>
 </html>
